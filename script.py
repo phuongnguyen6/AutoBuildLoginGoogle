@@ -30,14 +30,14 @@ with open("./android/app/google-services.json") as oldFile:
 
 #---------------------------------
 
-with open("./stylesToCopy.js") as newFile:
-    newText = newFile.read()
+with open("./stylesToCopy.js") as newStyleFile:
+    newStyleText = newStyleFile.read()
 
-with open("./styles.js") as oldFile:
-    oldText = oldFile.read()
+with open("./styles.js") as oldStyleFile:
+    oldStyleText = oldStyleFile.read()
 
-with open("./styles.js", "wb+") as oldFile:
-    oldFile.write(newText)
+with open("./styles.js", "w+") as oldStyleFile:
+    oldStyleFile.write(newStyleText)
 
-with open("./styles.js") as oldFile:
-    oldText = oldFile.read()
+with open("./styles.js") as oldStyleFile:
+    oldStyleText = oldStyleFile.read()
