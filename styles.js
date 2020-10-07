@@ -4,7 +4,7 @@ export default styles = StyleSheet.create({
     textBold: {
         fontSize: 15,
         fontWeight: "bold",
-        color: 'gray'
+        color: 'red'
     },
     textContent: {
         fontSize: 15,
