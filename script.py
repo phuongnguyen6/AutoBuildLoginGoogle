@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-# import json
-# import urllib2
-# from zipfile import ZipFile
-# import shutil
-# import os
-# import sys
-# import commands
-# import cgi
+import json
+import urllib2
+from zipfile import ZipFile
+import shutil
+import os
+import sys
+import commands
+import cgi
 
 # old_json_path = sys.argv[1]
 # new_json_path = sys.argv[2]
@@ -41,3 +41,10 @@ with open("./styles.js", "w+") as oldStyleFile:
 
 with open("./styles.js") as oldStyleFile:
     oldStyleText = oldStyleFile.read()
+
+for item in newText.split("\n"):
+  if "package_name" in item:
+     package_name = item.strip()[21:-2]
+print("Package name found: " +package_name)
+
+os.system('npx react-native-rename '+package_name)
