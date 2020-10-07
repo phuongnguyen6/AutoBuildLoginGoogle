@@ -32,18 +32,28 @@ class App extends React.Component {
     super(props);
     this.state = {
       userInfo: {
-        email: "phuongnnn.1010@gmail.com",
-        familyName: "Phuong",
-        givenName: "Nguyen",
-        id: "115612712439963297704",
-        name: "Nguyen Phuong",
-        photo: null
+        // email: "phuongnnn.1010@gmail.com",
+        // familyName: "Phuong",
+        // givenName: "Nguyen",
+        // id: "115612712439963297704",
+        // name: "Nguyen Phuong",
+        // photo: null
       }
     }
   }
   signIn = async () => {
     try {
       await GoogleSignin.hasPlayServices();
+      const isSignedIn = await GoogleSignin.isSignedIn();
+      if (isSignedIn) {
+
+        try {
+          await GoogleSignin.revokeAccess();
+          await GoogleSignin.signOut();
+        } catch (error) {
+          console.error(error);
+        }
+      }
       const userInfo = await GoogleSignin.signIn();
       this.setState({ userInfo: userInfo.user });
       console.log('userInfo: ', userInfo)

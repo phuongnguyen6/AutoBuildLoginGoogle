@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'LoginGoogle' do
+target 'logingoogle2' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'LoginGoogleTests' do
+  target 'logingoogle2Tests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +23,10 @@ target 'LoginGoogle' do
   end
 end
 
-target 'LoginGoogle-tvOS' do
-  # Pods for LoginGoogle-tvOS
+target 'logingoogle2-tvOS' do
+  # Pods for logingoogle2-tvOS
 
-  target 'LoginGoogle-tvOSTests' do
+  target 'logingoogle2-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
