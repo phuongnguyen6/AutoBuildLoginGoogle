@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-import json
-import urllib2
-from zipfile import ZipFile
-import shutil
-import os
-import sys
-import commands
-import cgi
+# import json
+# import urllib2
+# from zipfile import ZipFile
+# import shutil
+# import os
+# import sys
+# import commands
+# import cgi
 
 # old_json_path = sys.argv[1]
 # new_json_path = sys.argv[2]
