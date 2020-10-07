@@ -19,14 +19,14 @@ with open("./file2.json") as newFile:
 
 with open("./android/app/google-services.json") as oldFile:
     oldText = oldFile.read()
-    print "content in old google-services.json: " + oldText
+    print("content in old google-services.json: " + oldText)
 
 with open("./android/app/google-services.json", "wb+") as oldFile:
     oldFile.write(newText)
 
 with open("./android/app/google-services.json") as oldFile:
     oldText = oldFile.read()
-    print "content in new google-services.json: " + oldText
+    print("content in new google-services.json: " + oldText)
 
 #---------------------------------
 
